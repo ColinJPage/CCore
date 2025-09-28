@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c43560c47da7244820b0d5da5793ca, type: 3}
+  m_Name: StandardSoundLoop
+  m_EditorClassIdentifier: 
+  volumeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 16.066736
+      outSlope: 16.066736
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.132341
+    - serializedVersion: 3
+      time: 0.09109845
+      value: 0.86808413
+      inSlope: 0.62231994
+      outSlope: 0.62231994
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.44995943
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.8263169
+      value: 0.84238195
+      inSlope: -0.7946927
+      outSlope: -0.7946927
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.08463169
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: -8.853397
+      outSlope: -8.853397
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.082380585
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  startStagger: 0.5
