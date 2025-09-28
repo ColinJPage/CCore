@@ -1,0 +1,12 @@
+{
+    "name": "com.cjp.ccore",
+    "version": "1.0.0",
+    "displayName": "Colin Core",
+    "description": "This custom Unity package contains common scripts used by Colin across projects",
+    "unity": "6000.0",
+    "author": {
+        "name": "Colin Page",
+        "email": "colinjpage20@gmail.com",
+        "url": "colinpage.dev"
+    }
+}
