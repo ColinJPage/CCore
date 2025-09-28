@@ -118,4 +118,12 @@ public static class Extensions
     }
 
     public static int Coinflip =>Random.Range(0f, 1f) < 0.5f ? -1 : 1;
+    public static T CopyComponent<T>(T original, GameObject destination) where T : Component
+    {
+        var type = original.GetType();
+        var copy = destination.AddComponent(type);
+        var fields = type.GetFields();
+        foreach (var field in fields) field.SetValue(copy, field.GetValue(original));
+        return copy as T;
+    }
 }
