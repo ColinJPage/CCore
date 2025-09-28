@@ -4,6 +4,9 @@
     "displayName": "Colin Core",
     "description": "This custom Unity package contains common scripts used by Colin across projects",
     "unity": "6000.0",
+    "dependencies": {
+        "com.unity.ugui": "2.0.0"
+    },
     "author": {
         "name": "Colin Page",
         "email": "colinjpage20@gmail.com",
