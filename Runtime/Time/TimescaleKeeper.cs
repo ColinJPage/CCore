@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 /// <summary>
 /// This is the ONLY CLASS that is allowed to set Time.timescale!
@@ -65,5 +66,13 @@ public class TimescaleKeeper : MonoBehaviour
     void OnPauseChange(bool newPause)
     {
         pausedModifier.SetFactor(newPause ? 0f : 1f);
+    }
+    public static void ScaleTimeFor(float scale, float realTimeDuration)
+    {
+        var mod = new FloatMultiplier(scale);
+        TimescaleKeeper.instance.timeScale.AddModifier(mod);
+        var s = DOTween.Sequence().SetUpdate(true);
+        s.AppendInterval(realTimeDuration);
+        s.AppendCallback(() => { TimescaleKeeper.instance.timeScale.RemoveModifier(mod); });
     }
 }

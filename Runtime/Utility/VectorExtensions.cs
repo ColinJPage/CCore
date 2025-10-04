@@ -32,4 +32,8 @@ public static class VectorExtensions
     {
         return new Vector2(v2.x / Screen.width, v2.y / Screen.height);
     }
+    public static float Clamp(this Vector2 v2, float value)
+    {
+        return Mathf.Clamp(value, v2.x, v2.y);
+    }
 }
