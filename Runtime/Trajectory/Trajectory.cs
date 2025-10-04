@@ -133,7 +133,7 @@ public class Trajectory : MonoBehaviour
 
             RaycastHit hit;
             var segment = nextPosition - sim.currentPos;
-            var ray = new Ray(sim.currentPos, segment);
+            var ray = new Ray(sim.currentPos-acceleration.normalized*0.01f, segment);
 
             bool didHitWall = false;
             Vector3 hitWallNormal = Vector3.zero;
