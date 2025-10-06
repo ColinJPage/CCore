@@ -28,6 +28,10 @@ public static class VectorExtensions
     {
         return Mathf.Lerp(v2.x, v2.y, t);
     }
+    public static float InverseLerp(this Vector2 v2, float value)
+    {
+        return Mathf.InverseLerp(v2.x, v2.y, value);
+    }
     public static Vector2 WindowSpaceToNormalized(this Vector2 v2)
     {
         return new Vector2(v2.x / Screen.width, v2.y / Screen.height);
