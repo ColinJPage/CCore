@@ -7,7 +7,7 @@ using System;
 /*!A generic class that can schedule events when its value is changed. 
  * COLINHELP - need an explanation on how this class is being used
  */
-public class VariableReference<T> : ISerializationCallbackReceiver, ISubscribable<Action<T>>, ISubscribable<Action>
+public class VariableReference<T> : ISerializationCallbackReceiver, IVariableAccess<T>
 {
     [SerializeField]
     public bool useConstant = false;
@@ -41,7 +41,11 @@ public class VariableReference<T> : ISerializationCallbackReceiver, ISubscribabl
             SetValue(value);
         }
     }
-    public T GetValue(int depth = 0, int maxDepth = 10)
+    public T GetValue()
+    {
+        return GetDeepValue();
+    }
+    public T GetDeepValue(int depth = 0, int maxDepth = 10)
     {
         return (useConstant || !Variable) ? constantValue : Variable.Value;
     }
@@ -100,7 +104,7 @@ public class VariableReference<T> : ISerializationCallbackReceiver, ISubscribabl
     }
     public void SubscribeAndCall(Action<T> function)
     {
-        SubscribeWithoutNotify(function);
+        Subscribe(function);
         function(Value);
     }
     public void SubscribeWithoutNotify(Action<T> function)

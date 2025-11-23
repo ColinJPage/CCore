@@ -31,6 +31,7 @@ public static class SceneLoader
      */
     private static IEnumerator Loading(SceneTransition transition)
     {
+        Debug.Log($"Client transitioning to scene {transition.sceneField.SceneName}");
         SceneTransitionEffect transitionEffect = null;
         var style = transition.style;
         string sceneName = transition.sceneField;

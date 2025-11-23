@@ -64,17 +64,19 @@ public class Cooldown
     /// <summary>
     /// Set the timer to the current time
     /// </summary>
-    public void Restart()
+    public Cooldown Restart()
     {
         lastTime = CurrentTime;
+        return this;
     }
 
     /// <summary>
     /// Reset the timer immediately so that IsAfterTime will be true on its next call
     /// </summary>
-    public void Reset()
+    public Cooldown Reset()
     {
         lastTime = float.MinValue;
+        return this;
     }
 
 

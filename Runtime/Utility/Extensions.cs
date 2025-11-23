@@ -104,7 +104,7 @@ public static class Extensions
         }
     }
     /// <summary>
-    /// Returns whether the parameter was already true
+    /// Returns whether the parameter was already the value
     /// </summary>
     public static bool TrySet(this ref bool b, bool newVal)
     {

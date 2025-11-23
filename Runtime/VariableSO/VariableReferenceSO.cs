@@ -19,7 +19,7 @@ public class VariableReferenceSO<T> : IVariableSO<T>, ISubscribable<T>
 
     public override T GetValue(int depth = 0, int maxDepth = 10)
     {
-        return reference.GetValue(depth+1, maxDepth);
+        return reference.GetDeepValue(depth+1, maxDepth);
     }
 
     protected override void SetValue(T newValue)

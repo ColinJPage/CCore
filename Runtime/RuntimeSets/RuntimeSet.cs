@@ -12,9 +12,11 @@ public abstract class RuntimeSet<T> : ScriptableObject
     [SerializeField] int currentLength;
 
     [HideInInspector] private List<T> list = new List<T>();
+    public IReadOnlyCollection<T> collection => list;
 
     public event Action RemoveEvent;
     public event Action EmptyEvent;
+    public event Action ChangeEvent;
 
     void OnValidate()
     {
@@ -27,7 +29,9 @@ public abstract class RuntimeSet<T> : ScriptableObject
 #if UNITY_EDITOR
         currentLength = Count;
 #endif
+        OnChange();
     }
+
 
     public void Remove(T item)
     {
@@ -40,6 +44,7 @@ public abstract class RuntimeSet<T> : ScriptableObject
 #if UNITY_EDITOR
         currentLength = Count;
 #endif
+        OnChange();
     }
 
     public List<T> GetList()
@@ -72,5 +77,9 @@ public abstract class RuntimeSet<T> : ScriptableObject
         {
             action(e);
         }
+    }
+    void OnChange()
+    {
+        ChangeEvent?.Invoke();
     }
 }
