@@ -39,6 +39,7 @@ namespace Springs
             SetParameters(param.frequency, param.damping, param.response);
         }
 
+        // These equations are derived from this video: https://www.youtube.com/watch?v=KPoeNZZ6H4s
         private void SetParameters(float frequency, float zeta, float r)
         {
             var pi = Mathf.PI;

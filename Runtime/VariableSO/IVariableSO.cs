@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-/*!Abstract class outlining a SO that holds a variable and fires events when its value is changed.
- * COLINHELP - not sure the point of these classes
- */
+/// <summary>
+///Abstract class outlining a SO that holds a variable and fires events when its value is changed.
+/// </summary>
+
 public abstract class IVariableSO : ScriptableObject, ISubscribable<Action>
 {
     [TextArea(3, 5)]

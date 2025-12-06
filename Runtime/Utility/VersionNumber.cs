@@ -6,12 +6,13 @@ using TMPro;
 
 public class VersionNumber : MonoBehaviour
 {
+    [SerializeField] string prefix = "v";
     private TMP_Text text;
 
     private void Awake()
     {
         text = GetComponentInChildren<TMP_Text>();
 
-        text.text = "v"+Application.version;
+        text.text = prefix + Application.version;
     }
 }

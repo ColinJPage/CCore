@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+/// <summary>
+/// A collection of references that can be popuplated and managed at runtime.
+/// </summary>
 public abstract class RuntimeSet<T> : ScriptableObject
 {
     [TextArea(4, 6)]
