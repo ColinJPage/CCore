@@ -37,3 +37,6 @@ If you only wish to use the features of this package without making changes, do 
 ### Github Submodule Installation
 If you wish to use this package while retaining the possibility of modifying the files locally, do the following:
 1. Clone this repository into the "Packages" folder of your desired Unity project
+
+### Depenencies
+This package references DOTween and Text Mesh Pro. Those assembly definitions may need to be added to this package's assembly definition.
