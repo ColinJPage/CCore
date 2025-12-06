@@ -2,6 +2,8 @@
 
 CCore is a custom package for Unity 6 written by Colin Page. It contains utilities and common classes used across projects.
 
+Please be aware that many included classes and functions lack documentation. This package was originally created for private use, and adding clarity is an ongoing process.
+
 # Highlights
 ### 📨 VariableSO and VariableReference
 
@@ -18,3 +20,7 @@ The Event class is built off of C# Actions and provides a friendlier interface f
 ### 🔊 SoundSO
 
 A SoundSO represents a sound effect with parameter ranges to add variation when played (volume, pitch, spatial blend, etc.). When a SoundSO is played, SoundManager instantiates a new AudioSource to play it.
+
+### ☑️ State Machines
+
+An abstract state machine and states are defined with the hope of being highly reusable.
