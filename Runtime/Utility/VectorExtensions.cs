@@ -24,6 +24,10 @@ public static class VectorExtensions
     {
         return Random.Range(v2.x, v2.y);
     }
+    public static int RandomBetweenInclusive(this Vector2Int v2)
+    {
+        return Random.Range(v2.x, v2.y+1);
+    }
     public static float Lerp(this Vector2 v2, float t)
     {
         return Mathf.Lerp(v2.x, v2.y, t);
