@@ -29,6 +29,16 @@ public static class Extensions
         }
     }
 
+    public static List<Transform> GetChildren(this Transform transform)
+    {
+        var children = new List<Transform>();
+        for(int i = 0; i < transform.childCount; ++i)
+        {
+            children.Add(transform.GetChild(i));
+        }
+        return children;
+    }
+
     public static GameObject InstantiatePrefab(GameObject prefab, Vector3 position, Quaternion rotation, Transform parent)
     {
         GameObject go;
