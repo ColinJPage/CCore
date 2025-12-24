@@ -44,4 +44,8 @@ public static class VectorExtensions
     {
         return Mathf.Clamp(value, v2.x, v2.y);
     }
+    public static bool IsWithin(this Vector2 v2, float value)
+    {
+        return v2.x <= value && value <= v2.y;
+    }
 }
