@@ -10,9 +10,12 @@ public class ConnectingLine_OneParent : ConnectingLine
     protected override List<Vector3> GetPositions()
     {
         var positions = new List<Vector3>();
-        for(int i = 0; i < positions.Count; ++i)
+        if (transformParent)
         {
-            positions.Add(transformParent.GetChild(i).position);
+            for(int i = 0; i < transformParent.childCount; ++i)
+            {
+                positions.Add(transformParent.GetChild(i).position);
+            }
         }
         return positions;
     }

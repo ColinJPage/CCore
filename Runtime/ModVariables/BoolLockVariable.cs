@@ -42,4 +42,8 @@ public class BoolLockVariable : ModVariable<bool, BoolLock>
         AddModifier(newLock);
         return newLock;
     }
+    public void AddLock(BoolLock newLock)
+    {
+        AddModifier(newLock);
+    }
 }
