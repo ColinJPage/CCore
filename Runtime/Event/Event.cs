@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Event : ISubscribable<Action>
+public class Event : EventBroadcaster
 {
     public event Action myEvent;
 
