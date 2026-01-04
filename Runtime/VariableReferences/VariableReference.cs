@@ -152,6 +152,11 @@ public class FloatReference : VariableReference<float>
         Value = Mathf.Clamp(Value, min, max);
     }
 }
+[System.Serializable]
+public class DoubleReference : VariableReference<double>
+{
+
+}
 
 [System.Serializable]
 public class IntReference : VariableReference<int>
