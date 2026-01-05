@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Quit : MonoBehaviour
 {
-    public void QuitGame()
+    public static void QuitGame()
     {
         if(Application.platform == RuntimePlatform.WebGLPlayer)
         {
