@@ -5,7 +5,8 @@
     "description": "This custom Unity package contains common scripts used by Colin across projects",
     "unity": "6000.0",
     "dependencies": {
-        "com.unity.ugui": "2.0.0"
+        "com.unity.ugui": "2.0.0",
+        "com.unity.cinemachine": "3.1.0"
     },
     "author": {
         "name": "Colin Page",
